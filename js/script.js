@@ -75,6 +75,18 @@
       if (tile && !tile.querySelector('[data-doc-soon]')) tile.classList.remove('is-soon');
     });
 
+    // Single-file tiles: clicking anywhere on the card opens that file directly
+    document.querySelectorAll('.doc-tile:not(.is-soon)').forEach(function (tile) {
+      var links = tile.querySelectorAll('.doc-actions a[href]');
+      if (links.length !== 1) return;
+      var link = links[0];
+      tile.classList.add('is-link');
+      tile.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return;
+        window.open(link.href, '_blank', 'noopener');
+      });
+    });
+
     // Library summary ("3 of 5 available")
     document.querySelectorAll('[data-library-summary]').forEach(function (out) {
       var grid = document.getElementById(out.getAttribute('data-library-summary'));

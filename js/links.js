@@ -25,10 +25,10 @@ window.FARM_PULSE_LINKS = {
   docs: {
     /* --- Documents ---------------------------------------- */
     'project-charter':        '',
-    'proposal-IT22139962':    '',   // Chamindu Athukorala
-    'proposal-IT22540058':    '',   // Dewmini Sankalpana
-    'proposal-IT22220660':    '',   // Hashani Dharmarathna
-    'proposal-IT22196842':    '',   // Kaveesha Devindi
+    'proposal-IT22139962':    'https://mysliit-my.sharepoint.com/:b:/g/personal/it22139962_my_sliit_lk/IQAQHn6vlpQrSasgV9GfIX2_AX1Ve4QRuQuHV3HhQuxBq9w?e=ad9T9b&download=1',   // Chamindu Athukorala
+    'proposal-IT22540058':    'https://mysliit-my.sharepoint.com/:b:/g/personal/it22139962_my_sliit_lk/IQCm5tlsbbv8SY1UsDxMM0OxAemqII01IBWPkVjbH6bQqsY?e=US13Ra&download=1',   // Dewmini Sankalpana
+    'proposal-IT22220660':    'https://mysliit-my.sharepoint.com/:b:/g/personal/it22139962_my_sliit_lk/IQAFEUtIrufOSqOz1k9p-Qu_AXZoSZUuUTdYKVjOksro14s?e=e66n9p&download=1',   // Hashani Dharmarathna
+    'proposal-IT22196842':    'https://mysliit-my.sharepoint.com/:b:/g/personal/it22139962_my_sliit_lk/IQAOTYU5mcHGRbCk-SiTgwIXAZdIMwN_z8SMzmeAcO-LQDc?e=RnPSvU&download=1',   // Kaveesha Devindi
     'checklist':              '',
     'final-report':           '',
     'final-IT22139962':       '',
@@ -37,9 +37,9 @@ window.FARM_PULSE_LINKS = {
     'final-IT22196842':       '',
 
     /* --- Presentations ------------------------------------ */
-    'slides-proposal':        '',
-    'slides-pp1':             '',
-    'slides-pp2':             '',
+    'slides-proposal':        'https://mysliit-my.sharepoint.com/:p:/g/personal/it22139962_my_sliit_lk/IQD_sLo-4mRDTpige7B6Zv5YAdLchHZuxz1fKNhOySh6UXo?e=WM6VLy',
+    'slides-pp1':             'https://mysliit-my.sharepoint.com/:p:/g/personal/it22139962_my_sliit_lk/IQCTI5rCL2gMQqanX6N5qxYlAdTAOqz03Ux3DgegrtlQk-c?e=3Guo9Y',
+    'slides-pp2':             'https://mysliit-my.sharepoint.com/:p:/g/personal/it22139962_my_sliit_lk/IQDV8YBkvx1JR4RDYpQZTffAAcYrvhNs5cfr0NXERuecL4I?e=rRBkuA',
     'slides-final':           ''
   }
 };
