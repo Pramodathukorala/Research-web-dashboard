@@ -168,7 +168,7 @@
       { t: 'About Us — Research Team', c: 'Page', b: 'badge-page', d: 'Team members, roles and supervisors.', k: 'about team members supervisors', u: P + 'about.html' },
       { t: 'Contact', c: 'Page', b: 'badge-page', d: 'Get in touch with the research team.', k: 'contact email message', u: P + 'contact.html' },
 
-      { t: 'Chamindu Athukorala', c: 'Team', b: 'badge-team', d: 'IT22139962 • Environmental Monitoring & Risk Prediction', k: 'chamindu athukorala it22139962 iot environment temperature humidity ammonia co2 risk prediction', u: P + 'about.html#IT22139962' },
+      { t: 'Chamindu Athukorala', c: 'Team', b: 'badge-team', d: 'IT22139962 • Smart Chicken Behavior Alert System', k: 'chamindu athukorala it22139962 cctv chicken behaviour behavior abnormal alert notification', u: P + 'about.html#IT22139962' },
       { t: 'Dewmini Sankalpana', c: 'Team', b: 'badge-team', d: 'IT22540058 • Egg Quality & Yield Prediction', k: 'dewmini sankalpana it22540058 egg grading quality weight load cell cnn', u: P + 'about.html#IT22540058' },
       { t: 'Hashani Dharmarathna', c: 'Team', b: 'badge-team', d: 'IT22220660 • Snake & Scorpion Detection', k: 'hashani dharmarathna it22220660 snake scorpion intruder detection yolo nir uv', u: P + 'about.html#IT22220660' },
       { t: 'Kaveesha Devindi', c: 'Team', b: 'badge-team', d: 'IT22196842 • Poultry Disease Detection', k: 'kaveesha devindi kulasuriya it22196842 disease detection fecal mobilevit grad-cam', u: P + 'about.html#IT22196842' },
@@ -176,7 +176,7 @@
       { t: 'Poorna Panduwawala', c: 'Supervisor', b: 'badge-supervisor', d: 'Co-Supervisor • Department of Information Technology', k: 'poorna panduwawala co-supervisor', u: P + 'about.html#supervision' },
 
       { t: 'Research Proposals (×4)', c: 'Document', b: 'badge-docs', d: 'Individual research proposals for each component.', k: 'proposal document pdf onedrive', u: P + 'documents.html#proposals' },
-      { t: 'Proposal — IoT Environmental Monitoring & Risk Prediction', c: 'Document', b: 'badge-docs', d: 'Chamindu Athukorala (IT22139962)', k: 'proposal iot environment sensors risk', u: P + 'documents.html#proposals' },
+      { t: 'Proposal — Smart Chicken Behavior Alert System', c: 'Document', b: 'badge-docs', d: 'Chamindu Athukorala (IT22139962)', k: 'proposal cctv chicken behaviour behavior alert', u: P + 'documents.html#proposals' },
       { t: 'Proposal — Dual-Stream Poultry Disease Detection', c: 'Document', b: 'badge-docs', d: 'Kaveesha Devindi (IT22196842)', k: 'proposal disease detection deep learning', u: P + 'documents.html#proposals' },
       { t: 'Proposal — Egg Quality & Yield Predictor', c: 'Document', b: 'badge-docs', d: 'Dewmini Sankalpana (IT22540058)', k: 'proposal egg grading quality', u: P + 'documents.html#proposals' },
       { t: 'Proposal — Snake & Scorpion Detection', c: 'Document', b: 'badge-docs', d: 'Hashani Dharmarathna (IT22220660)', k: 'proposal snake scorpion intruder', u: P + 'documents.html#proposals' },
@@ -190,7 +190,7 @@
       { t: 'Research Gap', c: 'Research', b: 'badge-research', d: 'Why continuous, integrated poultry monitoring is still needed.', k: 'research gap limitations', u: P + 'domain.html#gap' },
       { t: 'Research Objectives', c: 'Research', b: 'badge-research', d: 'Main and specific objectives of Farm Pulse.', k: 'objectives aims goals', u: P + 'domain.html#objectives' },
       { t: 'Methodology', c: 'Research', b: 'badge-research', d: 'Data collection → processing → AI analysis → evaluation → notification.', k: 'methodology pipeline approach', u: P + 'domain.html#methodology' },
-      { t: 'Technologies', c: 'Research', b: 'badge-research', d: 'Python, TensorFlow, OpenCV, YOLO, MobileViT, IoT sensors, Raspberry Pi, Android.', k: 'technologies python computer vision machine learning cctv sensors yolo', u: P + 'domain.html#technologies' }
+      { t: 'Technologies', c: 'Research', b: 'badge-research', d: 'Python, TensorFlow, OpenCV, YOLO, MobileViT, CCTV, Raspberry Pi, Android.', k: 'technologies python computer vision machine learning cctv sensors yolo', u: P + 'domain.html#technologies' }
     ];
 
     var sel = 0;
@@ -520,6 +520,7 @@
         var desc = node.querySelector('.wt-desc');
         var chip = node.querySelector('.status-chip');
         var actions = node.querySelector('.wt-actions');
+        var feedback = node.querySelector('.wt-feedback');
         out.innerHTML =
           '<h3>' + escapeHtml(node.getAttribute('data-title')) + '</h3>' +
           '<p>' + escapeHtml(desc ? desc.textContent : '') + '</p>' +
@@ -528,6 +529,7 @@
             '<div><span>Marks</span><strong>' + escapeHtml(node.getAttribute('data-marks')) + '</strong></div>' +
             '<div><span>Status</span><strong>' + (chip ? chip.outerHTML : '') + '</strong></div>' +
           '</div>' +
+          (feedback ? feedback.outerHTML : '') +
           (actions ? '<div class="inspect-actions">' + actions.innerHTML + '</div>' : '');
       };
       select.addEventListener('change', function () {
