@@ -764,6 +764,7 @@ main.tab-exit {
   transition:transform 0.4s var(--ease-out), box-shadow 0.4s, border-color 0.4s;
 }
 .doc-tile:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(0,0,0,0.3); border-color:var(--accent-lime-dim); }
+.doc-tile.is-link { cursor:pointer; }
 .doc-tile.is-soon { opacity:0.75; }
 .doc-tile.is-soon:hover { border-color:var(--hairline); }
 .doc-thumbnail {
