@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <!-- Stylised poultry farm illustration (vector graphic, not a project photo) -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B2A20"/>
+      <stop offset="1" stop-color="#1A5A3F"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#218B5A"/>
+      <stop offset="1" stop-color="#14533A"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17694A"/>
+      <stop offset="1" stop-color="#0E3D2C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1240" cy="230" r="90" fill="#B6E36A" opacity=".18"/>
+  <circle cx="1240" cy="230" r="54" fill="#B6E36A" opacity=".35"/>
+  <path d="M0 560 C300 470 520 520 800 500 S1300 430 1600 480 V900 H0Z" fill="url(#hill2)"/>
+  <!-- Poultry houses -->
+  <g fill="#0E3D2C" opacity=".95">
+    <path d="M880 470 l120-60 h300 l120 60 v70 H880Z"/>
+    <path d="M520 500 l90-45 h230 l90 45 v55 H520Z"/>
+  </g>
+  <g fill="#B6E36A" opacity=".5">
+    <rect x="930" y="490" width="26" height="16" rx="3"/><rect x="980" y="490" width="26" height="16" rx="3"/>
+    <rect x="1030" y="490" width="26" height="16" rx="3"/><rect x="1080" y="490" width="26" height="16" rx="3"/>
+    <rect x="1130" y="490" width="26" height="16" rx="3"/><rect x="1180" y="490" width="26" height="16" rx="3"/>
+    <rect x="1230" y="490" width="26" height="16" rx="3"/><rect x="1280" y="490" width="26" height="16" rx="3"/>
+    <rect x="1330" y="490" width="26" height="16" rx="3"/>
+    <rect x="560" y="515" width="22" height="13" rx="3"/><rect x="600" y="515" width="22" height="13" rx="3"/>
+    <rect x="640" y="515" width="22" height="13" rx="3"/><rect x="680" y="515" width="22" height="13" rx="3"/>
+    <rect x="720" y="515" width="22" height="13" rx="3"/><rect x="760" y="515" width="22" height="13" rx="3"/>
+    <rect x="800" y="515" width="22" height="13" rx="3"/><rect x="840" y="515" width="22" height="13" rx="3"/>
+  </g>
+  <!-- CCTV pole -->
+  <g stroke="#B6E36A" stroke-width="5" fill="none" opacity=".7">
+    <path d="M1470 560 V380"/><path d="M1470 390 h-34"/>
+  </g>
+  <rect x="1400" y="380" width="44" height="22" rx="5" fill="#B6E36A" opacity=".7"/>
+  <path d="M1400 395 L1250 520 L1360 540Z" fill="#B6E36A" opacity=".07"/>
+  <path d="M0 650 C320 590 620 640 900 620 S1350 570 1600 610 V900 H0Z" fill="url(#hill1)"/>
+  <!-- Chickens (silhouettes) -->
+  <g fill="#0B2A20" opacity=".85">
+    <g transform="translate(300 700)">
+      <ellipse cx="0" cy="0" rx="34" ry="24"/><circle cx="30" cy="-24" r="13"/>
+      <path d="M41 -26 l12 4 -12 4z"/><path d="M24 -36 q6 -10 12 0z"/><path d="M-30 -6 q-22 -26 -8 -30 q6 12 14 14z"/>
+      <path d="M-6 22 v18 M8 22 v18" stroke="#0B2A20" stroke-width="4"/>
+    </g>
+    <g transform="translate(470 735) scale(.8)">
+      <ellipse cx="0" cy="0" rx="34" ry="24"/><circle cx="30" cy="-24" r="13"/>
+      <path d="M41 -26 l12 4 -12 4z"/><path d="M-30 -6 q-22 -26 -8 -30 q6 12 14 14z"/>
+      <path d="M-6 22 v18 M8 22 v18" stroke="#0B2A20" stroke-width="4"/>
+    </g>
+    <g transform="translate(160 760) scale(-.9 .9)">
+      <ellipse cx="0" cy="0" rx="34" ry="24"/><circle cx="30" cy="-24" r="13"/>
+      <path d="M41 -26 l12 4 -12 4z"/><path d="M-30 -6 q-22 -26 -8 -30 q6 12 14 14z"/>
+      <path d="M-6 22 v18 M8 22 v18" stroke="#0B2A20" stroke-width="4"/>
+    </g>
+  </g>
+  <path d="M0 790 C400 750 800 800 1200 770 S1500 760 1600 770 V900 H0Z" fill="#0E3D2C"/>
+</svg>
