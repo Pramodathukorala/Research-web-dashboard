@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css?v=3">
+  <link rel="stylesheet" href="../css/style.css?v=5">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body data-root="../">
@@ -74,7 +74,7 @@
             <p>Poultry farming is a major agricultural sector in Sri Lanka, especially for small and medium-scale farmers. Research on smart poultry farming spans several overlapping areas:</p>
             <div class="card-grid">
               <div class="info-card"><div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div><h4>Precision livestock farming</h4><p>Sensing, data processing and automation let farmers watch animals continuously instead of relying on periodic manual inspection. <span class="cite">[1]</span></p></div>
-              <div class="info-card"><div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div><h4>Environmental monitoring</h4><p>IoT sensors for temperature, humidity, ammonia and CO₂ are widely studied, but most deployments stop at threshold alerts without predictive analytics. <span class="cite">[2]</span></p></div>
+              <div class="info-card"><div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div><h4>Behaviour monitoring</h4><p>AI-based poultry monitoring exists, but most systems need high computing power and expensive hardware, and only detect abnormal conditions after they have become visible. <span class="cite">[2]</span></p></div>
               <div class="info-card"><div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h4>Disease detection</h4><p>Deep learning on poultry fecal images can flag diseases, yet most work uses a single image modality and ignores visible body symptoms. <span class="cite">[3]</span></p></div>
               <div class="info-card"><div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3.6 0-6.5 6-6.5 10.2A6.5 6.5 0 0 0 12 21a6.5 6.5 0 0 0 6.5-7.8C18.5 9 15.6 3 12 3z"/></svg></div><h4>Automated egg grading</h4><p>Weight- and vision-based egg inspection is established, but low-cost systems that grade size and cleanliness together are rare. <span class="cite">[4]</span></p></div>
               <div class="info-card"><div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Intruder detection</h4><p>Snake and scorpion detection has been studied outdoors and in urban settings, not in dim, cluttered, enclosed poultry sheds. <span class="cite">[5]</span></p></div>
@@ -102,7 +102,7 @@
               <div class="gap-card">
                 <span class="label">Existing approaches</span>
                 <ul>
-                  <li>Environmental monitoring shows raw readings only, with no risk classification or forecasting</li>
+                  <li>AI behaviour monitoring needs costly, high-compute hardware and flags problems only once they are visible</li>
                   <li>Disease models analyse a single image type (fecal images) and give no explanation</li>
                   <li>Egg grading is manual, or handles size and cleanliness separately</li>
                   <li>Snake / scorpion detectors are built for outdoor or urban scenes</li>
@@ -111,7 +111,7 @@
               <div class="gap-card solution">
                 <span class="label">Farm Pulse approach</span>
                 <ul>
-                  <li>Sensor + vision data classified into normal / warning / high risk, with predictive models</li>
+                  <li>Lightweight CCTV model checks a frame every 30 s and alerts only after repeated abnormal events</li>
                   <li>Dual-stream fecal + body-symptom analysis with Grad-CAM explanations, offline on Android</li>
                   <li>Combined weight + CNN cleanliness grading into six categories</li>
                   <li>NIR + UV fluorescence imaging with YOLO, built for low-light enclosed sheds</li>
@@ -124,7 +124,7 @@
             <div class="label">03 · Research Problem</div>
             <h2>Why poultry farms need smarter monitoring</h2>
             <ol class="problem-list">
-              <li><strong>Rapidly changing shed conditions</strong> — temperature, humidity, NH₃ and CO₂ fluctuate quickly and cause heat stress, disease and mortality when unmanaged.</li>
+              <li><strong>Late detection of abnormal behaviour</strong> — health and welfare problems usually go unnoticed until they are clearly visible, and existing AI monitoring is too costly and compute-heavy for real-time use on farms.</li>
               <li><strong>Late disease detection</strong> — affordable early-stage diagnosis tools are scarce for small and medium-scale farmers.</li>
               <li><strong>Manual egg grading</strong> — slow, inconsistent and error-prone, and unable to keep pace with continuous laying.</li>
               <li><strong>Dangerous intruders</strong> — snakes and scorpions destroy eggs and chicks, stress flocks and endanger workers.</li>
@@ -137,10 +137,10 @@
             <h2>What we set out to achieve</h2>
             <div class="objective-main">
               <span class="label">Main Objective</span>
-              <p>To develop an AI-powered smart poultry farm monitoring and management system that supports environmental risk prediction, early disease detection, automated egg grading and farm safety.</p>
+              <p>To develop an AI-powered smart poultry farm monitoring and management system that supports early detection of abnormal chicken behaviour, early disease detection, automated egg grading and farm safety.</p>
             </div>
             <ul class="objective-list">
-              <li><span>01</span>Build a multi-parameter IoT sensing and vision module that classifies and predicts poultry-house environmental risk.</li>
+              <li><span>01</span>Build a lightweight CCTV-based AI model that classifies chicken behaviour as normal or abnormal and alerts the farmer after repeated abnormal events.</li>
               <li><span>02</span>Detect common chicken diseases from fecal and body-symptom images, offline on Android, with explainable results.</li>
               <li><span>03</span>Grade eggs automatically by weight-based size and CNN-based cleanliness for real-time sorting.</li>
               <li><span>04</span>Detect snakes and scorpions in real time using NIR / UV imaging, YOLO and a Flock Unrest Index.</li>
@@ -153,7 +153,7 @@
             <h2>How the research is carried out</h2>
             <p>All components follow a shared pipeline, adapted to each component's data and goals.</p>
             <ol class="flow">
-              <li><h4>Data Collection</h4><p>Sensor readings, farm images and video</p></li>
+              <li><h4>Data Collection</h4><p>CCTV footage, sensor readings and farm images</p></li>
               <li><h4>Pre-processing</h4><p>Cleaning, labelling and feature preparation</p></li>
               <li><h4>AI Analysis</h4><p>Classification, detection and prediction models</p></li>
               <li><h4>Evaluation</h4><p>Accuracy and field validation</p></li>
@@ -161,9 +161,9 @@
             </ol>
             <div class="card-grid">
               <div class="info-card method-card">
-                <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
-                <h4>Environmental Monitoring & Risk Prediction</h4>
-                <p>IoT sensors track temperature, humidity, ammonia (NH₃) and CO₂ while a vision module reads flock crowd density and activity. Machine learning classifies house conditions as normal, warning or high risk and forecasts environmental risk from historical trends.</p>
+                <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+                <h4>Smart Chicken Behavior Alert System</h4>
+                <p>A lightweight AI model watches the live CCTV feed, capturing a frame every 30 seconds and classifying chicken behaviour as normal or abnormal. Abnormal detections are tracked over time instead of alerting on a single frame: when at least two abnormal events occur within a short period, the farmer is notified of a possible health or welfare issue.</p>
               </div>
               <div class="info-card method-card">
                 <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
@@ -194,8 +194,7 @@
               <div class="tech-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg><span>CNN / MobileViT</span></div>
               <div class="tech-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>YOLO</span></div>
               <div class="tech-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span>Grad-CAM</span></div>
-              <div class="tech-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg><span>IoT Sensors</span></div>
-              <div class="tech-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg><span>NH₃ / CO₂ Sensors</span></div>
+              <div class="tech-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg><span>CCTV Live Stream</span></div>
               <div class="tech-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16l-2-9H6z"/><path d="M12 11V8"/><circle cx="12" cy="6" r="2"/></svg><span>Load Cell + HX711</span></div>
               <div class="tech-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg><span>Raspberry Pi 4</span></div>
               <div class="tech-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span>NIR & UV Imaging</span></div>
@@ -243,7 +242,7 @@
     </div>
   </nav>
 
-  <script src="../js/links.js?v=3"></script>
-  <script src="../js/script.js?v=3"></script>
+  <script src="../js/links.js?v=5"></script>
+  <script src="../js/script.js?v=5"></script>
 </body>
 </html>
